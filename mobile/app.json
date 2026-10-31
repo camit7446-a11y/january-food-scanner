@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "January Food Scanner",
+    "slug": "january-food-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Take a photo of your meal to estimate its nutrition.",
+        "NSPhotoLibraryUsageDescription": "Choose a meal photo to estimate its nutrition."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ],
+      "package": "com.example.januaryfoodscanner"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow January Food Scanner to take meal photos.",
+          "photosPermission": "Allow January Food Scanner to select meal photos."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow January Food Scanner to use your camera to take meal photos."
+        }
+      ]
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}
